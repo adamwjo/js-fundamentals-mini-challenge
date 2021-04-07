@@ -44,20 +44,30 @@ console.log("%c----------", "color: red")
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
+function sameSameButDifferent(x, y) {
+  if (x === y) {
+    return "same same";
+  } else if (x == y) {
+    return "same same (but different)";
+  } else {
+    return "different";
+  }
+}
 
-// console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
+console.log(sameSameButDifferent(5, 5)) 
+// => "same same"
 
-// console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
+console.log(sameSameButDifferent(123, "123")) 
+// => "same same (but different)"
 
-// console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
-// console.log("%c----------", "color: red") 
+console.log(sameSameButDifferent(5, 7)) 
+// => "different"
+
+console.log(sameSameButDifferent(123, "122")) 
+// => "different"
+console.log("%c----------", "color: red") 
 
 
 
