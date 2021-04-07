@@ -15,7 +15,7 @@ console.log("%c----------", "color: red")
 // *** otherwise, the error will stop the rest of your code from running
 console.log("%cQuestion 2", "color: red") 
 const name = "Raffy";
-name = "Raffy";
+// name = "Raffy";
 console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
@@ -27,8 +27,13 @@ console.log(name)
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
-
-// console.log(drinkWater(12))
+function drinkWater(value) {
+    console.log("Man I sure am thirsty");
+    console.log("Ahh that hits the spot");
+    return value-1;
+  
+}
+console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
