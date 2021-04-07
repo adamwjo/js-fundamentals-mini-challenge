@@ -1,6 +1,6 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
+ console.log("%cQuestion 1", "color: red") 
 
 // console.log(counter) 
 // => 2
