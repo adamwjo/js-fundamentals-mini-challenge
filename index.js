@@ -44,8 +44,14 @@ console.log(drinkWater(12))
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
-
-// console.log(sameSameButDifferent(5, 5)) 
+function sameSameButDifferent(value1, value2) {
+  if (typeof value1 === typeof value2) {
+    if (value1 === value2) {
+      return "same same";
+    }
+  }
+}
+console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
 // console.log(sameSameButDifferent(123, "123")) 
