@@ -4,6 +4,7 @@ console.log("%cQuestion 1", "color: red")
 let counter = 1
 counter = 2
 console.log(counter) 
+let anotherVar = "another thing"
 // => 2
 console.log("%c----------", "color: red") 
 
