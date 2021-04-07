@@ -79,10 +79,14 @@ console.log(name)
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
+console.log("%cQuestion 5", "color: red")
+const student1 = { name: "Duane", grade: 88 }
+function updateGrade(student,grade) {
+  student1.grade = grade
+}
+
+updateGrade(student1, 92)
+console.log(student1)
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
 
