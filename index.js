@@ -14,8 +14,9 @@ console.log("%c----------", "color: red")
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 console.log("%cQuestion 2", "color: red") 
-
-// console.log(name)
+const name = "Raffy";
+name = "Raffy";
+console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
