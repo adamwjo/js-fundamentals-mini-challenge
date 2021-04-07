@@ -42,18 +42,36 @@ console.log(name)
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
+
+ console.log("%cQuestion 4", "color: red") 
+
+ function sameSameButDifferent(num, maybeNum){
+  if (num === maybeNum) {
+    return 'same same'
+  } else if (typeof maybeNum === "string") {
+    maybeNum = parseInt(maybeNum)
+    if (num === maybeNum) {
+      return 'same same (but different)'
+    }else if ( num !== maybeNum) {
+      return 'different'
+    }
+  }else {
+    return 'different'
+  }
+}
+
+
+ console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123")) 
+ console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
 
-// console.log(sameSameButDifferent(5, 7)) 
+ console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
 
-// console.log(sameSameButDifferent(123, "122")) 
+ console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
 // console.log("%c----------", "color: red") 
 
