@@ -48,6 +48,8 @@ function sameSameButDifferent(value1, value2) {
   if (typeof value1 === typeof value2) {
     if (value1 === value2) {
       return "same same";
+    } else {
+      return "different";
     }
   } else if (value1 == value2) {
     return "same same (but different)";
