@@ -24,9 +24,15 @@ console.log(name)
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
-
-// console.log(drinkWater(12))
+ console.log("%cQuestion 3", "color: red") 
+ function drinkWater(thirstLevel) {
+  console.log('Man I sure am thirsty')
+  thirstLevel --
+  console.log("Ahh that hits the spot")
+  return thirstLevel
+ }
+ 
+ console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
