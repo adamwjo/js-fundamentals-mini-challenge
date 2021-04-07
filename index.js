@@ -43,20 +43,33 @@ console.log("%c----------", "color: red")
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
+function sameSameButDifferent(num, maybeNum) {
+  if(num === maybeNum) // if numbers are equal
+      return "same same"
+  else if(typeof maybeNum === "string") { // checking if second number is a string
+            maybeNum = parseInt(maybeNum)
+            if(num === maybeNum)
+              return "same same (but different)"
+            else if(num !== maybeNum)
+              return "different"
+  } else
+      return "different"
+}
+
+console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123")) 
+console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
 
-// console.log(sameSameButDifferent(5, 7)) 
+console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
 
-// console.log(sameSameButDifferent(123, "122")) 
+console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
@@ -95,15 +108,15 @@ console.log("%c----------", "color: red")
 
 // ***** Callbacks *****
 
-function myMap(array, callback) {
-  const result = []
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i]
-    const value = callback(element)
-    result.push(value)
-  }
-  return result
-}
+// function myMap(array, callback) {
+//   const result = []
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i]
+//     const value = callback(element)
+//     result.push(value)
+//   }
+//   return result
+// }
 
 // ***** Callbacks - Question 1 *****
 
@@ -130,20 +143,20 @@ function myMap(array, callback) {
 
 // ***** Scope & Closures *****
 
-function takeANumber(line, name) {
-  line.push(name)
+// function takeANumber(line, name) {
+//   line.push(name)
 
-  return `Welcome, ${name}. You are number ${line.length} in line.`
-}
+//   return `Welcome, ${name}. You are number ${line.length} in line.`
+// }
 
-function nowServing(line) {
-  if (!line.length) {
-    return "There is nobody waiting to be served!"
-  }
-  return `Currently serving ${line.shift()}.`
-}
+// function nowServing(line) {
+//   if (!line.length) {
+//     return "There is nobody waiting to be served!"
+//   }
+//   return `Currently serving ${line.shift()}.`
+// }
 
-const line = []
+// const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
