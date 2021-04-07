@@ -1,8 +1,9 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
-
-// console.log(counter) 
+console.log("%cQuestion 1", "color: red") 
+let counter = 1
+counter = 2
+console.log(counter) 
 // => 2
 // console.log("%c----------", "color: red") 
 
@@ -13,9 +14,10 @@
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
 
-// console.log(name)
+const name = "Laura"
+console.log(name)
 // => "Raffy"
-// name = "Not Raffy" 
+name = "Not Raffy" 
 // => TypeError
 // console.log("%c----------", "color: red") 
 
@@ -23,13 +25,18 @@
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+function drinkWater () {
+  console.log "Man I sure am thirsty"
+  
+  console.log "Ahh that hits the spot"
+}
+console.log(drinkWater(12))
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+console.log("%c----------", "color: red") 
 
 
 
