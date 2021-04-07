@@ -24,13 +24,21 @@ console.log("%c----------", "color: red")
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+function drinkWater(x) {
+  console.log("Man I sure am thirsty");
+  console.log("Ahh that hits the spot");
+  return x - 1;
+}
+
+console.log(drinkWater(12))
+
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+
+console.log("%c----------", "color: red") 
 
 
 
