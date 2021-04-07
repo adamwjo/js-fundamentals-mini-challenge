@@ -12,25 +12,32 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
-
-// console.log(name)
+console.log("%cQuestion 2", "color: red") 
+const name = "James"
+console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
+function drinkWater(thirstLevel) {
+  console.log("Man I sure am thirsty")
+  thirstLevel -= 1
+  console.log("Ahh that hits the spot")
+  return thirstLevel
+}
+
+console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
