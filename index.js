@@ -13,8 +13,8 @@ console.log(counter)
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
-
-// console.log(name)
+const name = "adam"
+console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
@@ -25,8 +25,14 @@ console.log(counter)
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
-
-// console.log(drinkWater(12))
+function drinkWater(thirstLevel) {
+  console.log("Man I sure am thirsty")
+   const newthirstLevel = thirstLevel - 1
+  console.log("Ahh that hits the spot")
+  return newthirstLevel
+  
+}
+console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
@@ -37,17 +43,24 @@ console.log(counter)
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
-
-// console.log(sameSameButDifferent(5, 5)) 
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum)
+  return "same same"
+  if (num == maybeNum)
+  return "same same (but different)"
+  else 
+  return "different"
+}
+console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123")) 
+console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
 
-// console.log(sameSameButDifferent(5, 7)) 
+console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
 
-// console.log(sameSameButDifferent(123, "122")) 
+console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
 // console.log("%c----------", "color: red") 
 
@@ -56,26 +69,31 @@ console.log(counter)
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
+const student1 = { name: "Duane", grade: 88 }
+updateGrade(student1, 92)
+console.log(student1)
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
-
-
+function updateGrade(student, grade = num) {
+student = updateGrade.name
+}
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+// for(let user of users){
+//   console.log(user.name,user.phones)
+// }
+users.forEach((users)=> console.log(users.name, users.phones));
 // printNameAndPhones(users)
 // // => "Duane"
 // => "Cell: 555-123-4567"
@@ -102,11 +120,13 @@ function myMap(array, callback) {
 
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
-
-// console.log(myMap([1,2,3,4,5], triple)) 
+function triple(array) {
+  console.log(myMap)
+}
+console.log(myMap([1,2,3,4,5], triple)) 
 // // => [3,6,9,12,15]
 
-// console.log(myMap([2,4,6,8], triple))   
+console.log(myMap([2,4,6,8], triple))   
 // // => [6,12,18,24]
 // console.log("%c----------", "color: red") 
 
