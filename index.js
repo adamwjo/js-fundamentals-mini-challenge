@@ -49,18 +49,22 @@ function sameSameButDifferent(value1, value2) {
     if (value1 === value2) {
       return "same same";
     }
+  } else if (value1 == value2) {
+    return "same same (but different)";
+  } else {
+    return "different";
   }
 }
 console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123")) 
+console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
 
-// console.log(sameSameButDifferent(5, 7)) 
+console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
 
-// console.log(sameSameButDifferent(123, "122")) 
+console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
 // console.log("%c----------", "color: red") 
 
