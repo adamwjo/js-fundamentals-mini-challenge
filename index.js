@@ -137,27 +137,30 @@ console.log("%c----------", "color: red")
 
 // // ***** Callbacks *****
 
-// function myMap(array, callback) {
-//   const result = []
-//   for (let i = 0; i < array.length; i++) {
-//     const element = array[i]
-//     const value = callback(element)
-//     result.push(value)
-//   }
-//   return result
-// }
+function myMap(array, callback) {
+  const result = []
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i]
+    const value = callback(element)
+    result.push(value)
+  }
+  return result
+}
 
-// // ***** Callbacks - Question 1 *****
+// ***** Callbacks - Question 1 *****
 
-// *** Uncomment the lines below to test
-//console.log("%cCallbacks - Question 1", "color: red")
+//*** Uncomment the lines below to test
+console.log("%cCallbacks - Question 1", "color: red")
 
-// console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
+const triple = (num) => num * 3;
 
-// console.log(myMap([2,4,6,8], triple))   
-// // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log(myMap([1,2,3,4,5], triple)) 
+// => [3,6,9,12,15]
+
+console.log(myMap([2,4,6,8], triple))   
+// => [6,12,18,24]
+
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
