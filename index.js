@@ -184,10 +184,12 @@ function nowServing(line) {
   return `Currently serving ${line.shift()}.`
 }
 
+let ticketNum = 1
+
 function takeATicketNumber(line) {
-  let ticketNum = line.length+1
   line.push(ticketNum)
-  return `Welcome. You are ticket number ${ticketNum}`
+  ticketNum++
+  return `Welcome. You are ticket number ${ticketNum-1}`
 }
 
 
