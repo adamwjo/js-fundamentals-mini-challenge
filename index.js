@@ -171,43 +171,56 @@ console.log("%c----------", "color: red")
 
 // ***** Scope & Closures *****
 
-// function takeANumber(line, name) {
-//   line.push(name)
+function takeANumber(line, name) {
+  line.push(name)
 
-//   return `Welcome, ${name}. You are number ${line.length} in line.`
-// }
+  return `Welcome, ${name}. You are number ${line.length} in line.`
+}
 
-// function nowServing(line) {
-//   if (!line.length) {
-//     return "There is nobody waiting to be served!"
-//   }
-//   return `Currently serving ${line.shift()}.`
-// }
+function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
+  return `Currently serving ${line.shift()}.`
+}
 
-// const line = []
+function takeATicketNumber(line) {
+  let ticketNum = line.length+1
+  line.push(ticketNum)
+  return `Welcome. You are ticket number ${ticketNum}`
+}
+
+
+
+const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+console.log(line)
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+console.log(line)
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+console.log(line)
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
+console.log(nowServing(line))
+console.log(line)
+// => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+console.log(line)
+// => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
