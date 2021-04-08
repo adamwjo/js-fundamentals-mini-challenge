@@ -95,42 +95,62 @@ console.log("%c----------", "color: red")
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
-// // => "Duane"
+const users = [ 
+  { 
+    name: "Duane",
+    phones:
+    { cell: "555-123-4567",
+      office: "555-456-7890" }
+  },
+  { 
+    name: "Liza",
+    phones:
+    { cell: "555-234-5678",
+      office: "555-567-1234" }
+  }
+]
+
+function printNameAndPhones(listOfUsers) {
+  listOfUsers.forEach(function(user) {  
+    if (typeof user === 'object') {
+      console.log(user["name"]);
+      console.log(`Cell: ${user["phones"]["cell"]}`);
+      console.log(`Office: ${user["phones"]["office"]}`);
+    } else {
+      console.log(user);
+    };
+  });
+};
+
+printNameAndPhones(users)
+// => "Duane"
 // => "Cell: 555-123-4567"
 // => "Office: 555-456-7890"
 // => "Liza"
 // => "Cell: 555-234-5678"
 // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+
+console.log("%c----------", "color: red") 
 
 
-// ***** Callbacks *****
+// // ***** Callbacks *****
 
-function myMap(array, callback) {
-  const result = []
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i]
-    const value = callback(element)
-    result.push(value)
-  }
-  return result
-}
+// function myMap(array, callback) {
+//   const result = []
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i]
+//     const value = callback(element)
+//     result.push(value)
+//   }
+//   return result
+// }
 
-// ***** Callbacks - Question 1 *****
+// // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+//console.log("%cCallbacks - Question 1", "color: red")
 
 // console.log(myMap([1,2,3,4,5], triple)) 
 // // => [3,6,9,12,15]
@@ -150,28 +170,37 @@ function myMap(array, callback) {
 
 
 
-// ***** Scope & Closures *****
+// // ***** Scope & Closures *****
 
-function takeANumber(line, name) {
-  line.push(name)
+// function takeANumber(line, name) {
+//   line.push(name)
 
-  return `Welcome, ${name}. You are number ${line.length} in line.`
-}
+//   return `Welcome, ${name}. You are number ${line.length} in line.`
+// }
 
-function nowServing(line) {
-  if (!line.length) {
-    return "There is nobody waiting to be served!"
-  }
-  return `Currently serving ${line.shift()}.`
-}
+// function nowServing(line) {
+//   if (!line.length) {
+//     return "There is nobody waiting to be served!"
+//   }
+//   return `Currently serving ${line.shift()}.`
+// }
 
-const line = []
+// const line = []
 
-// ***** Scope & Closures - Question 1 *****
+// // ***** Scope & Closures - Question 1 *****
 
 
-// *** Uncomment the lines below to test
+// // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
+
+// let ticketNum = 1;
+
+// function takeATicketNumber(line) {
+//   line.push(ticketNum);
+//   ticketNum++;
+//   return `Welcome. You are ticket number ${ticketNum - 1}`;
+// }
+
 
 // console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 1`
