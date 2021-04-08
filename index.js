@@ -7,7 +7,7 @@ console.log(counter);
 // => 2
 // console.log("%c----------", "color: red")
 const name;
-
+console.log("Hi, I am Amy");
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in
