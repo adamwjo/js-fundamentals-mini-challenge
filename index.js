@@ -5,7 +5,7 @@ let  counter = 1
 counter = 2
  console.log(counter) 
 //=> 2
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
@@ -18,7 +18,7 @@ console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 
 
@@ -36,7 +36,7 @@ console.log(name)
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 
 
@@ -73,7 +73,7 @@ console.log(name)
 
  console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 
 
@@ -84,11 +84,10 @@ const student1 = { name: "Duane", grade: 88 }
 function updateGrade(student,grade) {
   student1.grade = grade
 }
-
 updateGrade(student1, 92)
 console.log(student1)
 // // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red")
+ console.log("%c----------", "color: red")
 
 
 
@@ -117,7 +116,7 @@ console.log(student1)
 // => "Liza"
 // => "Cell: 555-234-5678"
 // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
@@ -135,14 +134,17 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+ console.log("%cCallbacks - Question 1", "color: red")
+function triple(element){
+  return element * 3
+}
 
-// console.log(myMap([1,2,3,4,5], triple)) 
+ console.log(myMap([1,2,3,4,5], triple)) 
 // // => [3,6,9,12,15]
 
-// console.log(myMap([2,4,6,8], triple))   
+ console.log(myMap([2,4,6,8], triple))   
 // // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
@@ -171,29 +173,36 @@ function nowServing(line) {
 }
 
 const line = []
-
+ ticketNum = 1
 // ***** Scope & Closures - Question 1 *****
 
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+ console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
+function takeATicketNumber(array){
+  line.push(ticketNum)
+  ticketNum++
+  return `Welcome. You are ticket number ${line.shift()}`
+  
+}
+
+ console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
+ console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
+ console.log(nowServing(line))
 // // => `Currently serving 1.`
 
-// console.log(nowServing(line))
+ console.log(nowServing(line))
 // // => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
+ console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
