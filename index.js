@@ -178,52 +178,74 @@ console.log("%c----------", "color: red")
 
 // // ***** Scope & Closures *****
 
-// function takeANumber(line, name) {
-//   line.push(name)
+function takeANumber(line, name) {
+  line.push(name)
 
-//   return `Welcome, ${name}. You are number ${line.length} in line.`
-// }
+  return `Welcome, ${name}. You are number ${line.length} in line.`
+}
 
-// function nowServing(line) {
-//   if (!line.length) {
-//     return "There is nobody waiting to be served!"
-//   }
-//   return `Currently serving ${line.shift()}.`
-// }
+function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
+  return `Currently serving ${line.shift()}.`
+}
 
-// const line = []
+const line = []
 
-// // ***** Scope & Closures - Question 1 *****
+// ***** Scope & Closures - Question 1 *****
 
 
-// // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+// *** Uncomment the lines below to test
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// let ticketNum = 1;
+let ticketNum = 1;
 
-// function takeATicketNumber(line) {
-//   line.push(ticketNum);
-//   ticketNum++;
-//   return `Welcome. You are ticket number ${ticketNum - 1}`;
-// }
+function takeATicketNumber(line) {
+  line.push(ticketNum);
+  ticketNum++;
+  return `Welcome. You are ticket number ${line.slice(-1)}`;
+}
 
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
+
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
+
+console.log(nowServing(line))
+// => `Currently serving 1.`
+
+console.log(nowServing(line))
+// => `Currently serving 2.`
+
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
+
+
+// //extra ticket testing console.log's:
+// console.log(takeATicketNumber(line))
+// // => `Welcome. You are ticket number 4`
 
 // console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
-
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+// // => `Welcome. You are ticket number 5`
 
 // console.log(nowServing(line))
-// // => `Currently serving 1.`
+// // => `Currently serving 3.`
 
 // console.log(nowServing(line))
-// // => `Currently serving 2.`
+// // => `Currently serving 4.`
+
+// console.log(nowServing(line))
+// // => `Currently serving 5.`
+
+// console.log(nowServing(line))
+//  // => 'There is nobody waiting to be served!'
 
 // console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+// // => `Welcome. You are ticket number 6`
 
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
