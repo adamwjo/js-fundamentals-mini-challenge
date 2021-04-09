@@ -4,15 +4,17 @@ console.log("%cQuestion 1", "color: red");
 let counter = 1;
 counter = 2;
 console.log(counter);
-// => 2
-// console.log("%c----------", "color: red")
-const name;
-console.log("Hi, I am Amy");
+ => 2
+console.log("%c----------", "color: red")
+
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
-// *** after testing, comment the line causing the error back in
-// *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red")
+ *** after testing, comment the line causing the error back in
+ *** otherwise, the error will stop the rest of your code from running
+ console.log("%cQuestion 2", "color: red")
+const name = "Amy";
+name = "Not Raffy";
+console.log("Hi, I am Amy");
 
 // console.log(name)
 // => "Raffy"
