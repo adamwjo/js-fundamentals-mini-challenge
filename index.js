@@ -238,26 +238,16 @@ console.log(takeATicketNumber(line))
 console.log("%cScope & Closures - Question 2", "color: red")
 
 const newLine = []
-const takeATicketNumberFunc = function ticketNumberGeneratorFunc() {
-  let newTicketNumber = 0;
-  let result = takeATicketNumber(newLine);
-  // console.log(result);
-  return result;
+const takeATicketNumberFunc = ticketNumberGeneratorFunc();
+function ticketNumberGeneratorFunc() {
+  let ticketNum = 0;
+  return function(arr) {
+    ticketNum++;
+    arr.push(ticketNum);
+    return "Welcome. You are number " + ticketNum;
+  }
 }
-// const takeATicketNumberFunc = function(newLine) {
-//   let newTicketNumber = 0;
-  
-//   return function(newLine) {
-//     newLine.push(++newTicketNumber);
-//     return `Welcome. You are number ${newTicketNumber} in line.`
-//   }
-// }
 
-// function takeATicketNumber(line) {
-//   line.push(++ticketNumber);
-
-//   return `Welcome. You are number ${ticketNumber} in line.`
-// }
 
 console.log(takeATicketNumberFunc(newLine))
 // // // => `Welcome. You are ticket number 1`
