@@ -20,13 +20,13 @@ console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 function drinkWater(value) {
     console.log("Man I sure am thirsty");
     console.log("Ahh that hits the spot");
@@ -43,7 +43,7 @@ console.log(drinkWater(12))
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+console.log("%cQuestion 4", "color: red") 
 function sameSameButDifferent(value1, value2) {
   if (typeof value1 === typeof value2) {
     if (value1 === value2) {
@@ -99,7 +99,7 @@ console.log(sameSameButDifferent(123, "122"))
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
+console.log("%cQuestion 5", "color: red")
 const student1 = { name: "Duane", grade: 88 }
 updateGrade(student1, 92)
 console.log(student1)
@@ -114,7 +114,7 @@ function updateGrade(obj, num) {
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
 const users = [ 
   { 
@@ -140,11 +140,17 @@ function printNameAndPhones(users) {
       console.log(element["phones"]["cell"])
       console.log(element["phones"]["office"])
       // console.log(element["phone"])
-    } else {
+      // console.log(Object.values(element));
       console.log(element);
     }
   });
+
+
+
 }
+
+
+
 
 // ***** Callbacks *****
 
@@ -161,7 +167,7 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+console.log("%cCallbacks - Question 1", "color: red")
 const triple = (x) => x * 3;
 console.log(myMap([1,2,3,4,5], triple)) 
 // // => [3,6,9,12,15]
@@ -173,9 +179,9 @@ console.log(myMap([2,4,6,8], triple))
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 2", "color: red")
-
-// console.log(myMap(["Raffy", "Chase"], greet)) 
+console.log("%cCallbacks - Question 2", "color: red")
+const greet = (x) => `Hi ${x}`;
+console.log(myMap(["Raffy", "Chase"], greet)) 
 // // => ["Hi, Raffy!", "Hi, Chase!"]
 // console.log("%c----------", "color: red") 
 
@@ -202,44 +208,70 @@ const line = []
 
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+console.log("%cScope & Closures - Question 1", "color: red")
+let ticketNumber = 0;
 
-// console.log(takeATicketNumber(line))
+function takeATicketNumber(line) {
+  line.push(++ticketNumber);
+
+  return `Welcome. You are number ${ticketNumber} in line.`
+}
+console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
+console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
+console.log(nowServing(line))
 // // => `Currently serving 1.`
 
-// console.log(nowServing(line))
+console.log(nowServing(line))
 // // => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
+console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 3`
 
 // console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 2", "color: red")
+console.log("%cScope & Closures - Question 2", "color: red")
 
-// const newLine = []
-// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 1`
+const newLine = []
+const takeATicketNumberFunc = function ticketNumberGeneratorFunc() {
+  let newTicketNumber = 0;
+  let result = takeATicketNumber(newLine);
+  // console.log(result);
+  return result;
+}
+// const takeATicketNumberFunc = function(newLine) {
+//   let newTicketNumber = 0;
+  
+//   return function(newLine) {
+//     newLine.push(++newTicketNumber);
+//     return `Welcome. You are number ${newTicketNumber} in line.`
+//   }
+// }
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 2`
+// function takeATicketNumber(line) {
+//   line.push(++ticketNumber);
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 1.`
+//   return `Welcome. You are number ${ticketNumber} in line.`
+// }
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 2.`
+console.log(takeATicketNumberFunc(newLine))
+// // // => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumberFunc(newLine))
+// // // => `Welcome. You are ticket number 2`
 
-// console.log("%c----------", "color: red") 
+console.log(nowServing(newLine))
+// // // => `Currently serving 1.`
+
+console.log(nowServing(newLine))
+// // // => `Currently serving 2.`
+
+console.log(takeATicketNumberFunc(newLine))
+// // // => `Welcome. You are ticket number 3`
+
+console.log("%c----------", "color: red") 
