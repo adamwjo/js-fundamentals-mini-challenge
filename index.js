@@ -81,15 +81,24 @@ console.log(student1);
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
 
-// const users = [
-//   {
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   {
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
+const users = [
+  {
+    name: "Duane",
+    phones: { cell: "555-123-4567", office: "555-456-7890" },
+  },
+  {
+    name: "Liza",
+    phones: { cell: "555-234-5678", office: "555-567-1234" },
+  },
+];
+function printNameAndPhones(users) {
+  users.forEach((element) => {
+    console.log(element.name);
+    console.log(`Cell: ${element.phones.cell}`);
+    console.log(`Office: ${element.phones.office}`);
+  });
+}
+printNameAndPhones(users);
 // // => "Duane"
 // => "Cell: 555-123-4567"
 // => "Office: 555-456-7890"
@@ -137,6 +146,14 @@ console.log(myMap(["Raffy", "Chase"], greet));
 
 // ***** Scope & Closures *****
 
+function takeATicketNumber(line) {
+  let number = line.length;
+  number++;
+  line.push(number);
+
+  return `Welcome. You are ticket number ${number}`;
+}
+
 function takeANumber(line, name) {
   line.push(name);
 
@@ -157,10 +174,10 @@ const line = [];
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
+console.log(takeATicketNumber(line));
 // // => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
+console.log(takeATicketNumber(line));
 // // => `Welcome. You are ticket number 2`
 
 // console.log(nowServing(line))
