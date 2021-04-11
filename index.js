@@ -6,15 +6,17 @@ counter = 2;
 console.log(counter);
 // => 2
 // console.log("%c----------", "color: red")
-const name;
-console.log("Hi, I am Amy");
+
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red")
+const name = "Amy";
+//name = "Not Raffy";
+console.log("Hi, I am Amy");
 
-// console.log(name)
+console.log(name);
 // => "Raffy"
 // name = "Not Raffy"
 // => TypeError
@@ -23,9 +25,15 @@ console.log("Hi, I am Amy");
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red")
+function drinkWater(thirst) {
+  console.log("Man I sure am thirst");
+  thirst -= 1;
+  console.log("Ahhh that hits the spot");
+  return thirst;
+}
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
+console.log(drinkWater(12));
+//=> "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
 // console.log("%c----------", "color: red")
@@ -33,14 +41,23 @@ console.log("Hi, I am Amy");
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red")
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    return "same same";
+  } else if (num === parseInt(maybeNum)) {
+    return "same same (but different)";
+  } else {
+    return "different";
+  }
+}
 
-// console.log(sameSameButDifferent(5, 5))
+console.log(sameSameButDifferent(5, 5));
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123"))
+console.log(sameSameButDifferent(123, "123"));
 // // => "same same (but different)"
 
-// console.log(sameSameButDifferent(5, 7))
+console.log(sameSameButDifferent(5, 7));
 // // => "different"
 
 // console.log(sameSameButDifferent(123, "122"))
@@ -50,10 +67,14 @@ console.log("Hi, I am Amy");
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
+const student1 = { name: "Duane", grade: 88 };
+function updateGrade(student1, grade) {
+  student1.grade = grade;
+}
 // const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
-// // => { name: "Duane", grade: 92 }
+updateGrade(student1, 92);
+console.log(student1);
+
 // console.log("%c----------", "color: red")
 
 // ***** Question 6 *****
@@ -93,11 +114,13 @@ function myMap(array, callback) {
 
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
-
-// console.log(myMap([1,2,3,4,5], triple))
+function triple(element) {
+  return element * 3;
+}
+console.log(myMap([1, 2, 3, 4, 5], triple));
 // // => [3,6,9,12,15]
 
-// console.log(myMap([2,4,6,8], triple))
+console.log(myMap([2, 4, 6, 8], triple));
 // // => [6,12,18,24]
 // console.log("%c----------", "color: red")
 
