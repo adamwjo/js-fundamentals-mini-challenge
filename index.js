@@ -127,8 +127,11 @@ console.log(myMap([2, 4, 6, 8], triple));
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 2", "color: red")
-
-// console.log(myMap(["Raffy", "Chase"], greet))
+function greet(element) {
+  let greet = "Hi";
+  return `${greet} ${element} `;
+}
+console.log(myMap(["Raffy", "Chase"], greet));
 // // => ["Hi, Raffy!", "Hi, Chase!"]
 // console.log("%c----------", "color: red")
 
